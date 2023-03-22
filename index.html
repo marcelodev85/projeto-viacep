@@ -11,73 +11,85 @@
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&family=Open+Sans:wght@400;700&family=Roboto:wght@100&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="css/styles.css" />
   </head>
   <body>
-    <header>
-      <nav>
+    <header class="nav-container">
+      <nav class="nav-main">
         <h1>ViaCep</h1>
-        <div>contato</div>
+        <div class="contact-link">contato</div>
       </nav>
     </header>
     <main>
-      <section id="form-section">
-        <div>
+      <section id="form-section" class="form-container">
+        <div class="card-form">
           <form action="">
-            <div>
+            <div class="form-control">
               <label for="cep">Cep</label>
-              <input name="cep" id="cep" type="text" placeholder="cep" />
+              <input
+                name="cep"
+                id="cep"
+                class="form-input"
+                type="text"
+                placeholder="cep"
+              />
+              <div class="error-message">Campo requerido</div>
             </div>
-            <div>
+
+            <div class="form-control">
               <label for="street">Logradouro</label>
               <input
                 name="street"
                 id="street"
+                class="form-input"
                 placeholder="Logradouro"
                 type="text"
+                disabled
               />
             </div>
-            <div>
+
+            <div class="form-control">
               <label for="number">Número</label>
               <input
                 name="number"
                 id="number"
+                class="form-input"
                 placeholder="Número"
                 type="text"
               />
+              <div class="error-message">Campo requerido</div>
             </div>
-            <div>
+
+            <div class="form-control">
               <label for="cidade">Cidade</label>
               <input
                 name="cidade"
                 id="cidade"
+                class="form-input"
                 placeholder="Cidade"
                 type="text"
+                disabled
               />
             </div>
 
-            <div>
-              <button>Salvar</button>
-              <button>Limpar</button>
+            <div class="btn-container">
+              <button class="btn btn-left">Salvar</button>
+              <button class="btn btn-right">Limpar</button>
             </div>
           </form>
         </div>
       </section>
 
-      <section id="list-section ">
-        <div>
+      <section id="list-section " class="list-container">
+        <div class="card-list-item">
           <h3>São Paulo</h3>
-          <p>rua sao jode</p>
-          <p>82630-540</p>
+          <p class="address-line">Rua sao jode</p>
+          <p class="address-cep">82630-540</p>
         </div>
-        <div>
+        <div class="card-list-item">
           <h3>São Paulo</h3>
-          <p>rua sao jode</p>
-          <p>82630-540</p>
-        </div>
-        <div>
-          <h3>São Paulo</h3>
-          <p>rua sao jode</p>
-          <p>82630-540</p>
+          <p class="address-line">Rua sao jode</p>
+          <p class="address-cep">82630-540</p>
         </div>
       </section>
     </main>
