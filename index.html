@@ -23,7 +23,7 @@
     <main>
       <section id="form-section" class="form-container">
         <div class="card-form">
-          <form action="">
+          <form name="newAddress">
             <div class="form-control">
               <label for="cep">Cep</label>
               <input
@@ -33,7 +33,7 @@
                 type="text"
                 placeholder="cep"
               />
-              <div class="error-message">Campo requerido</div>
+              <div class="error-message" data-cep="cep">Campo requerido</div>
             </div>
 
             <div class="form-control">
@@ -57,14 +57,16 @@
                 placeholder="Número"
                 type="text"
               />
-              <div class="error-message">Campo requerido</div>
+              <div class="error-message" data-error="number">
+                Campo requerido
+              </div>
             </div>
 
             <div class="form-control">
-              <label for="cidade">Cidade</label>
+              <label for="city">Cidade</label>
               <input
-                name="cidade"
-                id="cidade"
+                name="city"
+                id="city"
                 class="form-input"
                 placeholder="Cidade"
                 type="text"
@@ -73,8 +75,10 @@
             </div>
 
             <div class="btn-container">
-              <button class="btn btn-left">Salvar</button>
-              <button class="btn btn-right">Limpar</button>
+              <button name="btnSave" class="btn btn-left" type="submit">
+                Salvar
+              </button>
+              <button name="btnClear" class="btn btn-right">Limpar</button>
             </div>
           </form>
         </div>
@@ -93,5 +97,7 @@
         </div>
       </section>
     </main>
+
+    <script type="module" src="js/script.js"></script>
   </body>
 </html>
